@@ -1,0 +1,51 @@
+<script>
+    const nota1g1 = parseFloat(prompt("Digite a primeira nota principal (Grupo 1):"));
+    const nota2g1 = parseFloat(prompt("Digite a primeira nota de recuperação (Grupo 1):"));
+    const nota3g1 = parseFloat(prompt("Digite a segunda nota de recuperação (Grupo 1):"));
+//g2
+
+    const nota1g2 = parseFloat(prompt("Digite a primeira nota principal (Grupo 2):"));
+    const nota2g2 = parseFloat(prompt("Digite a primeira nota de recuperação (Grupo 2):"));
+    const nota3g2 = parseFloat(prompt("Digite a segunda nota de recuperação (Grupo 2):"));
+
+
+    let maiorNotaG1, maiorNotaG2, media;
+
+
+    if (nota1g1 >= nota2g1 && nota1g1 >= nota3g1) {
+        maiorNotaG1 = nota1g1;
+    } else if (nota2g1 >= nota1g1 && nota2g1 >= nota3g1) {
+        maiorNotaG1 = nota2g1;
+    } else {
+        maiorNotaG1 = nota3g1;
+    }
+
+    if (nota1g2 >= nota2g2 && nota1g2 >= nota3g2) {
+        maiorNotaG2 = nota1g2;
+    } else if (nota2g2 >= nota1g2 && nota2g2 >= nota3g2) {
+        maiorNotaG2 = nota2g2;
+    } else {
+        maiorNotaG2 = nota3g2;
+    }
+
+    media = (maiorNotaG1 + maiorNotaG2) / 2;
+
+
+    document.write(`
+        As notas do Grupo 1 foram:<br>
+        - Nota principal: ${nota1g1.toFixed(2)}<br>
+        - Primeira nota de recuperação: ${nota2g1.toFixed(2)}<br>
+        - Segunda nota de recuperação: ${nota3g1.toFixed(2)}<br>
+        <br><br>
+        As notas do Grupo 2 foram:<br>
+        - Nota principal: ${nota1g2.toFixed(2)}<br>
+        - Primeira nota de recuperação: ${nota2g2.toFixed(2)}<br>
+        - Segunda nota de recuperação: ${nota3g2.toFixed(2)}<br>
+        <br><br>
+        As maiores notas do Grupo 1 e 2 foram: ${maiorNotaG1.toFixed(2)}, ${maiorNotaG2.toFixed(2)}.<br>
+        entao, a media trimestral e de  ${media.toFixed(2)} pontos.
+    `);
+
+
+    </script>   
+

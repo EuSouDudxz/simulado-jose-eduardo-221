@@ -1,0 +1,34 @@
+<script>
+ let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+
+
+ let temCupom = prompt("Você possui um cupom de desconto? (S/N)").toUpperCase();
+
+
+ let desconto = 0;
+
+ switch (true) {
+    case (valorCompra < 100):
+        desconto = 0; // Sem desconto
+        break;
+    case (valorCompra >= 100 && valorCompra <= 200):
+        desconto = 0.10 * valorCompra; // 10% de desconto
+        break;
+    case (valorCompra > 200):
+        desconto = 0.20 * valorCompra; // 20% de desconto
+        break;
+    default:
+        desconto = 0; // Para garantir que desconto seja zero
+ }
+
+ if (temCupom === "S") {
+    desconto += 0.05 * (valorCompra - desconto); // da 5% de desconto
+
+    let valorFinal = valorCompra - desconto;    
+
+document.write(`Valor original da compra: R$ ${valorCompra}<br>`);
+document.write(`Valor do desconto: R$ ${desconto}<br>`);
+document.write(`Valor final da compra: R$ ${valorFinal}`);
+}
+
+    </script>

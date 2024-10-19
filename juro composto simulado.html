@@ -1,0 +1,15 @@
+<script>
+    /* Calcule o juro composto de 15% ao mês, do 7o mês, sobre o valor inicial de R$ 20,00 */
+    // Entrada de dados
+    let juro = 0.15; // 15% de juro ao mês
+    let valorInicial = 20; // Valor inicial de R$ 20,00
+    let mes = 7; // Número de meses
+    
+    // Processamento
+    let valor = valorInicial * ( (1 + juro) ** mes );
+    
+    // Saída de dados
+    document.write(`No ${mes} mês, o juro composto de ${(juro*100).toFixed(2)}% sobre 
+    o valor inicial de R$ ${valorInicial.toFixed(2)} passará a valer R$ ${valor.toFixed(2)}.`);
+
+    </script>
